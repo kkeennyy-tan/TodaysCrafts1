@@ -80,9 +80,10 @@
             // 
             this.sign_in.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(96)))), ((int)(((byte)(138)))));
             this.sign_in.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sign_in.FlatAppearance.BorderSize = 0;
             this.sign_in.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sign_in.Font = new System.Drawing.Font("Roboto", 11F);
-            this.sign_in.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(69)))), ((int)(((byte)(98)))));
+            this.sign_in.ForeColor = System.Drawing.Color.White;
             this.sign_in.Location = new System.Drawing.Point(70, 338);
             this.sign_in.Name = "sign_in";
             this.sign_in.Size = new System.Drawing.Size(269, 39);

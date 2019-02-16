@@ -56,7 +56,7 @@ namespace Todays_Crafts
             textBox8.Text = "";
             textBox9.Text = "";
             textBox10.Text = "";
-            id = 0;
+            
         }
 
         //Insert Data 

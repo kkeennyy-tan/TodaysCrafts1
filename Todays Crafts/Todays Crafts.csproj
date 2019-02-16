@@ -69,6 +69,12 @@
     <Compile Include="employeecontrol.Designer.cs">
       <DependentUpon>employeecontrol.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAppConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAppConfig.Designer.cs">
+      <DependentUpon>FrmAppConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="employeecontrol.resx">
       <DependentUpon>employeecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAppConfig.resx">
+      <DependentUpon>FrmAppConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUserDashboard.resx">
       <DependentUpon>FrmUserDashboard.cs</DependentUpon>

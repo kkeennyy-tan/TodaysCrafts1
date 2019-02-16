@@ -18,8 +18,7 @@ namespace Todays_Crafts
         SqlDataAdapter adapt;
         DataTable dt;
 
-        //ID variable used in Updating and Deleting Record  
-        int id = 0;
+
 
         public inventorycontrol()
         {
@@ -58,7 +57,7 @@ namespace Todays_Crafts
             textBox15.Text = "";
             textBox16.Text = "";
             textBox17.Text = "";
-            id = 0;
+            
         }
 
         //Insert Data 
@@ -96,6 +95,7 @@ namespace Todays_Crafts
             }
         }
 
+        //update data
         private void button2_Click(object sender, EventArgs e)
         {
             if (textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "" && textBox11.Text != "" && textBox12.Text != "" && textBox13.Text != "" && textBox14.Text != "" && textBox15.Text != "" && textBox16.Text != "" && textBox17.Text != "")
@@ -164,6 +164,7 @@ namespace Todays_Crafts
             
         }
 
+        //delete data
         private void button3_Click(object sender, EventArgs e)
         {
             try

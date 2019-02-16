@@ -33,7 +33,7 @@ namespace Todays_Crafts
         {
             sidepanel.Height = purchasebtn.Height;
             sidepanel.Top = purchasebtn.Top;
-            purchasecontrol2.BringToFront();
+            purchasecontrol1.BringToFront();
             homebtn.BackColor = Color.FromArgb(58, 69, 88);
             inventorybtn.BackColor = Color.FromArgb(58, 69, 88);
             purchasebtn.BackColor = Color.FromArgb(147,170,255);
@@ -45,7 +45,7 @@ namespace Todays_Crafts
         {
             sidepanel.Height = inventorybtn.Height;
             sidepanel.Top = inventorybtn.Top;
-            inventorycontrol2.BringToFront();
+            inventorycontrol1.BringToFront();
             homebtn.BackColor = Color.FromArgb(58, 69, 88);
             inventorybtn.BackColor = Color.FromArgb(255,190,190);
             purchasebtn.BackColor = Color.FromArgb(58, 69, 88);
@@ -57,7 +57,7 @@ namespace Todays_Crafts
         {
             sidepanel.Height = infobtn.Height;
             sidepanel.Top = infobtn.Top;
-            infocontrol2.BringToFront();
+            infocontrol1.BringToFront();
             homebtn.BackColor = Color.FromArgb(58, 69, 88);
             inventorybtn.BackColor = Color.FromArgb(58, 69, 88);
             purchasebtn.BackColor = Color.FromArgb(58, 69, 88);
@@ -69,7 +69,7 @@ namespace Todays_Crafts
         {
             sidepanel.Height = employeebtn.Height;
             sidepanel.Top = employeebtn.Top;
-            employeecontrol1.BringToFront();
+            employeecontrol3.BringToFront();
             homebtn.BackColor = Color.FromArgb(58, 69, 88);
             inventorybtn.BackColor = Color.FromArgb(58, 69, 88);
             purchasebtn.BackColor = Color.FromArgb(58, 69, 88);
@@ -81,7 +81,7 @@ namespace Todays_Crafts
         {
             sidepanel.Height = homebtn.Height;
             sidepanel.Top = homebtn.Top;
-            homecontrol2.BringToFront();
+            homecontrol1.BringToFront();
             homebtn.BackColor = Color.FromArgb(238, 96, 138);
             inventorybtn.BackColor = Color.FromArgb(58, 69, 88);
             purchasebtn.BackColor = Color.FromArgb(58, 69, 88);

@@ -18,7 +18,7 @@ namespace Todays_Crafts
         SqlDataAdapter adapt;
         DataTable dt;
         //ID variable used in Updating and Deleting Record  
-        int id = 0;
+        
 
         public infocontrol()
         {
@@ -56,7 +56,7 @@ namespace Todays_Crafts
             textBox10.Text = "";
             textBox11.Text = "";
             textBox12.Text = "";
-            id = 0;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
