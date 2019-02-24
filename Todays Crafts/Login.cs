@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Todays_Crafts.Class;
 
+// dbclass connection string
 namespace Todays_Crafts
 {
     public partial class Login : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-BUHG7VK\SQLEXPRESS01;Initial Catalog=TodaysCrafts;Integrated Security=True");
+        dbclass con = new dbclass(); // to be called in forms where you created your class create object 
+        // dbclass= connection string
+        //SqlConnection con = new SqlConnection(@"Data Source=CISCO-27\SQLEXPRESS;Initial Catalog=TodaysCrafts;Integrated Security=True");
 
         public Login()
         {
@@ -50,7 +54,7 @@ namespace Todays_Crafts
 
         private void sign_in_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT status from admin WHERE username = '" + uname.Text + "' and password = '" + password.Text + "'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT status from admin WHERE username = '" + uname.Text + "' and password = '" + password.Text + "'", con.conDB);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if(dt.Rows.Count==1)
@@ -63,10 +67,12 @@ namespace Todays_Crafts
                 }
                 else if (dt.Rows[0][0].ToString() == "user")
                 {
-                    FrmUserDashboard da= new FrmUserDashboard (dt.Rows[0][0].ToString());
+                    FrmEmployeeDashboard da= new FrmEmployeeDashboard (dt.Rows[0][0].ToString());
                     da.Show();
                 }
             }
+            
+
         }
     }
 }
