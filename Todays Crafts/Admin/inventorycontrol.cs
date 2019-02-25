@@ -208,6 +208,11 @@ namespace Todays_Crafts
             dataGridView1.DataSource = dt.Tables[0];
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

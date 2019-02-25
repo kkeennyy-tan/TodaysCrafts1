@@ -13,6 +13,7 @@ namespace Todays_Crafts.Class
 
         public dbclass()
         {
+
             string con = @"Data Source=KENNY\SERVER;Initial Catalog=TodaysCrafts;Integrated Security=True";
             conDB = new SqlConnection(con); //connection string
         }

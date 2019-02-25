@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.homebtn = new System.Windows.Forms.Button();
             this.infobtn = new System.Windows.Forms.Button();
+            this.lblGreeting = new System.Windows.Forms.Label();
             this.employeebtn = new System.Windows.Forms.Button();
             this.purchasebtn = new System.Windows.Forms.Button();
             this.inventorybtn = new System.Windows.Forms.Button();
+            this.sidepanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -45,12 +49,16 @@
             this.employeeTableAdapter = new Todays_Crafts.TodaysCraftsTableAdapters.employeeTableAdapter();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.todaysCrafts = new Todays_Crafts.TodaysCrafts();
-            this.employeecontrol1 = new Todays_Crafts.employeecontrol();
-            this.infocontrol2 = new Todays_Crafts.infocontrol();
-            this.sidepanel = new System.Windows.Forms.Panel();
-            this.inventorycontrol2 = new Todays_Crafts.inventorycontrol();
-            this.purchasecontrol1 = new Todays_Crafts.purchasecontrol();
+            this.lblTime = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.homecontrol1 = new Todays_Crafts.homecontrol();
+            this.purchasecontrol1 = new Todays_Crafts.purchasecontrol();
+            this.inventorycontrol2 = new Todays_Crafts.inventorycontrol();
+            this.infocontrol2 = new Todays_Crafts.infocontrol();
+            this.employeecontrol1 = new Todays_Crafts.employeecontrol();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -62,7 +70,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 31);
             this.label1.TabIndex = 1;
@@ -71,7 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(18, 46);
+            this.panel1.Location = new System.Drawing.Point(18, 97);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 4;
@@ -81,6 +89,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.panel2.Controls.Add(this.homebtn);
             this.panel2.Controls.Add(this.infobtn);
+            this.panel2.Controls.Add(this.lblGreeting);
             this.panel2.Controls.Add(this.employeebtn);
             this.panel2.Controls.Add(this.purchasebtn);
             this.panel2.Controls.Add(this.inventorybtn);
@@ -128,6 +137,17 @@
             this.infobtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.infobtn.UseVisualStyleBackColor = true;
             this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
+            // 
+            // lblGreeting
+            // 
+            this.lblGreeting.AutoSize = true;
+            this.lblGreeting.Font = new System.Drawing.Font("Lato", 12F);
+            this.lblGreeting.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblGreeting.Location = new System.Drawing.Point(14, 14);
+            this.lblGreeting.Name = "lblGreeting";
+            this.lblGreeting.Size = new System.Drawing.Size(70, 19);
+            this.lblGreeting.TabIndex = 18;
+            this.lblGreeting.Text = "Greeting";
             // 
             // employeebtn
             // 
@@ -180,9 +200,20 @@
             this.inventorybtn.UseVisualStyleBackColor = true;
             this.inventorybtn.Click += new System.EventHandler(this.inventorybtn_Click);
             // 
+            // sidepanel
+            // 
+            this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(169)))), ((int)(((byte)(250)))));
+            this.sidepanel.Location = new System.Drawing.Point(1, 174);
+            this.sidepanel.Name = "sidepanel";
+            this.sidepanel.Size = new System.Drawing.Size(18, 73);
+            this.sidepanel.TabIndex = 8;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(131)))), ((int)(((byte)(154)))));
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.lblstatus);
             this.panel3.Controls.Add(this.button5);
@@ -192,25 +223,36 @@
             this.panel3.Size = new System.Drawing.Size(1025, 47);
             this.panel3.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(916, 1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(42, 41);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Font = new System.Drawing.Font("Roboto", 12F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(818, 13);
+            this.label2.Location = new System.Drawing.Point(729, 13);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
+            this.label2.Size = new System.Drawing.Size(88, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "Login As   :";
             // 
             // lblstatus
             // 
             this.lblstatus.AutoSize = true;
-            this.lblstatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblstatus.Font = new System.Drawing.Font("Lato", 12F);
             this.lblstatus.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblstatus.Location = new System.Drawing.Point(907, 13);
+            this.lblstatus.Location = new System.Drawing.Point(831, 14);
             this.lblstatus.Name = "lblstatus";
-            this.lblstatus.Size = new System.Drawing.Size(53, 20);
+            this.lblstatus.Size = new System.Drawing.Size(52, 19);
             this.lblstatus.TabIndex = 4;
             this.lblstatus.Text = "status";
             // 
@@ -252,6 +294,60 @@
             this.todaysCrafts.DataSetName = "TodaysCrafts";
             this.todaysCrafts.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Lato", 12F);
+            this.lblTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.lblTime.Location = new System.Drawing.Point(996, 60);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(43, 19);
+            this.lblTime.TabIndex = 19;
+            this.lblTime.Text = "Time";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Lato", 12F);
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.lblDate.Location = new System.Drawing.Point(1091, 60);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(43, 19);
+            this.lblDate.TabIndex = 20;
+            this.lblDate.Text = "Date";
+            // 
+            // homecontrol1
+            // 
+            this.homecontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.homecontrol1.Location = new System.Drawing.Point(275, 174);
+            this.homecontrol1.Name = "homecontrol1";
+            this.homecontrol1.Size = new System.Drawing.Size(1025, 572);
+            this.homecontrol1.TabIndex = 17;
+            // 
+            // purchasecontrol1
+            // 
+            this.purchasecontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.purchasecontrol1.Location = new System.Drawing.Point(275, 174);
+            this.purchasecontrol1.Name = "purchasecontrol1";
+            this.purchasecontrol1.Size = new System.Drawing.Size(1025, 572);
+            this.purchasecontrol1.TabIndex = 16;
+            // 
+            // inventorycontrol2
+            // 
+            this.inventorycontrol2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.inventorycontrol2.Location = new System.Drawing.Point(275, 174);
+            this.inventorycontrol2.Name = "inventorycontrol2";
+            this.inventorycontrol2.Size = new System.Drawing.Size(1025, 572);
+            this.inventorycontrol2.TabIndex = 15;
+            // 
+            // infocontrol2
+            // 
+            this.infocontrol2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.infocontrol2.Location = new System.Drawing.Point(275, 174);
+            this.infocontrol2.Name = "infocontrol2";
+            this.infocontrol2.Size = new System.Drawing.Size(1025, 572);
+            this.infocontrol2.TabIndex = 8;
+            // 
             // employeecontrol1
             // 
             this.employeecontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
@@ -263,45 +359,26 @@
             this.employeecontrol1.Size = new System.Drawing.Size(1025, 572);
             this.employeecontrol1.TabIndex = 7;
             // 
-            // infocontrol2
+            // timer1
             // 
-            this.infocontrol2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.infocontrol2.Location = new System.Drawing.Point(275, 174);
-            this.infocontrol2.Name = "infocontrol2";
-            this.infocontrol2.Size = new System.Drawing.Size(1025, 572);
-            this.infocontrol2.TabIndex = 8;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // sidepanel
+            // panel4
             // 
-            this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(169)))), ((int)(((byte)(250)))));
-            this.sidepanel.Location = new System.Drawing.Point(1, 174);
-            this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(18, 73);
-            this.sidepanel.TabIndex = 8;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(965, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 35);
+            this.panel4.TabIndex = 21;
             // 
-            // inventorycontrol2
+            // panel5
             // 
-            this.inventorycontrol2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.inventorycontrol2.Location = new System.Drawing.Point(275, 174);
-            this.inventorycontrol2.Name = "inventorycontrol2";
-            this.inventorycontrol2.Size = new System.Drawing.Size(1025, 572);
-            this.inventorycontrol2.TabIndex = 15;
-            // 
-            // purchasecontrol1
-            // 
-            this.purchasecontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.purchasecontrol1.Location = new System.Drawing.Point(275, 174);
-            this.purchasecontrol1.Name = "purchasecontrol1";
-            this.purchasecontrol1.Size = new System.Drawing.Size(1025, 572);
-            this.purchasecontrol1.TabIndex = 16;
-            // 
-            // homecontrol1
-            // 
-            this.homecontrol1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.homecontrol1.Location = new System.Drawing.Point(275, 174);
-            this.homecontrol1.Name = "homecontrol1";
-            this.homecontrol1.Size = new System.Drawing.Size(1025, 572);
-            this.homecontrol1.TabIndex = 17;
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(907, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 35);
+            this.panel5.TabIndex = 22;
             // 
             // Dashboard
             // 
@@ -309,7 +386,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1300, 746);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.homecontrol1);
+            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.purchasecontrol1);
             this.Controls.Add(this.inventorycontrol2);
             this.Controls.Add(this.infocontrol2);
@@ -328,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todaysCrafts)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -356,5 +436,12 @@
         private infocontrol infocontrol2;
         private inventorycontrol inventorycontrol2;
         private purchasecontrol purchasecontrol1;
+        private System.Windows.Forms.Label lblGreeting;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

@@ -12,6 +12,8 @@ namespace Todays_Crafts
 {
     public partial class Dashboard : Form
     {
+        Timer t = new Timer();
+
         public Dashboard(string status)
         {
             InitializeComponent();
@@ -94,22 +96,36 @@ namespace Todays_Crafts
             this.Validate();
             this.employeeBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.todaysCrafts);
-
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'todaysCrafts.employee' table. You can move, or remove it, as needed.
-           // this.employeeTableAdapter.Fill(this.todaysCrafts.employee);
+            // this.employeeTableAdapter.Fill(this.todaysCrafts.employee);
 
+            // Real time clock
+            timer1.Start();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = DateTime.Now.ToLongDateString();
+
+            if (DateTime.UtcNow.AddHours(8).Hour < 12)
+            {
+                lblGreeting.Text = "Good Morning";
+            }
+            else if (DateTime.UtcNow.AddHours(8).Hour < 17)
+            {
+                lblGreeting.Text = "Good Afternoon"; 
+            }
+            else
+            {
+                lblGreeting.Text = "Good Evening";
+            }
         }
 
-        private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            timer1.Start();
         }
-
-
-
     }
 }
