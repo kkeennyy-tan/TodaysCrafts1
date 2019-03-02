@@ -127,10 +127,10 @@
       <DependentUpon>FrmAppConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmAppSetting.cs" />
-    <Compile Include="FrmEmployeeDashboard.cs">
+    <Compile Include="Employee\FrmEmployeeDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEmployeeDashboard.Designer.cs">
+    <Compile Include="Employee\FrmEmployeeDashboard.Designer.cs">
       <DependentUpon>FrmEmployeeDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSqlHelper.cs" />
@@ -194,7 +194,7 @@
     <EmbeddedResource Include="FrmAppConfig.resx">
       <DependentUpon>FrmAppConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmployeeDashboard.resx">
+    <EmbeddedResource Include="Employee\FrmEmployeeDashboard.resx">
       <DependentUpon>FrmEmployeeDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\homecontrol.resx">
