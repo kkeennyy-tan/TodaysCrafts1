@@ -134,6 +134,7 @@ namespace Todays_Crafts
                 adapt.Fill(dt);
                 dataGridView1.DataSource = dt.Tables[0];
                 con.conDB.Close();
+                ClearData();
 
             }
             catch (Exception ex)
