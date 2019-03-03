@@ -148,7 +148,7 @@ namespace Todays_Crafts
                 adapt = new SqlDataAdapter("SELECT * FROM employee ORDER BY id ", con.conDB);
                 dt = new DataSet();
                 adapt.Fill(dt);
-                dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dt.Tables[0];
                 con.conDB.Close();
 
             }
