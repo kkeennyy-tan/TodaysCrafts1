@@ -95,6 +95,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\frmCashAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\frmCashAdvance.Designer.cs">
+      <DependentUpon>frmCashAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmJobOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\frmJobOrder.Designer.cs">
+      <DependentUpon>frmJobOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\frmSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\dbclass.cs" />
     <Compile Include="Admin\Dashboard.cs">
       <SubType>Form</SubType>
@@ -184,6 +202,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\employeecontrol.resx">
       <DependentUpon>employeecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmCashAdvance.resx">
+      <DependentUpon>frmCashAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmJobOrder.resx">
+      <DependentUpon>frmJobOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\frmEmpHome.resx">
       <DependentUpon>frmEmpHome.cs</DependentUpon>

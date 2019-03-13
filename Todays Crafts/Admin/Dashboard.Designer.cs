@@ -41,6 +41,8 @@
             this.inventorybtn = new System.Windows.Forms.Button();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblstatus = new System.Windows.Forms.Label();
@@ -57,8 +59,8 @@
             this.infocontrol2 = new Todays_Crafts.infocontrol();
             this.employeecontrol1 = new Todays_Crafts.employeecontrol();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
@@ -90,6 +92,8 @@
             this.panel2.Controls.Add(this.homebtn);
             this.panel2.Controls.Add(this.infobtn);
             this.panel2.Controls.Add(this.lblGreeting);
+            this.panel2.Controls.Add(this.button3);
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.employeebtn);
             this.panel2.Controls.Add(this.purchasebtn);
             this.panel2.Controls.Add(this.inventorybtn);
@@ -123,19 +127,20 @@
             // 
             // infobtn
             // 
+            this.infobtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.infobtn.FlatAppearance.BorderSize = 0;
             this.infobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.infobtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.infobtn.ForeColor = System.Drawing.SystemColors.Control;
             this.infobtn.Image = global::Todays_Crafts.Properties.Resources.infos;
             this.infobtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.infobtn.Location = new System.Drawing.Point(18, 393);
+            this.infobtn.Location = new System.Drawing.Point(18, 396);
             this.infobtn.Name = "infobtn";
             this.infobtn.Size = new System.Drawing.Size(257, 73);
             this.infobtn.TabIndex = 13;
             this.infobtn.Text = "       Customer Info";
             this.infobtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.infobtn.UseVisualStyleBackColor = true;
+            this.infobtn.UseVisualStyleBackColor = false;
             this.infobtn.Click += new System.EventHandler(this.infobtn_Click);
             // 
             // lblGreeting
@@ -151,53 +156,56 @@
             // 
             // employeebtn
             // 
+            this.employeebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.employeebtn.FlatAppearance.BorderSize = 0;
             this.employeebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.employeebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.employeebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.employeebtn.Image = global::Todays_Crafts.Properties.Resources.employee1;
             this.employeebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employeebtn.Location = new System.Drawing.Point(18, 466);
+            this.employeebtn.Location = new System.Drawing.Point(18, 470);
             this.employeebtn.Name = "employeebtn";
             this.employeebtn.Size = new System.Drawing.Size(257, 73);
             this.employeebtn.TabIndex = 12;
             this.employeebtn.Text = "       Employee";
             this.employeebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.employeebtn.UseVisualStyleBackColor = true;
+            this.employeebtn.UseVisualStyleBackColor = false;
             this.employeebtn.Click += new System.EventHandler(this.employeebtn_Click);
             // 
             // purchasebtn
             // 
+            this.purchasebtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.purchasebtn.FlatAppearance.BorderSize = 0;
             this.purchasebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.purchasebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.purchasebtn.ForeColor = System.Drawing.SystemColors.Control;
             this.purchasebtn.Image = global::Todays_Crafts.Properties.Resources.purchase;
             this.purchasebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.purchasebtn.Location = new System.Drawing.Point(18, 320);
+            this.purchasebtn.Location = new System.Drawing.Point(18, 322);
             this.purchasebtn.Name = "purchasebtn";
             this.purchasebtn.Size = new System.Drawing.Size(257, 73);
             this.purchasebtn.TabIndex = 11;
             this.purchasebtn.Text = "       Purchase Order";
             this.purchasebtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.purchasebtn.UseVisualStyleBackColor = true;
+            this.purchasebtn.UseVisualStyleBackColor = false;
             this.purchasebtn.Click += new System.EventHandler(this.purchasebtn_Click);
             // 
             // inventorybtn
             // 
+            this.inventorybtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
             this.inventorybtn.FlatAppearance.BorderSize = 0;
             this.inventorybtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.inventorybtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inventorybtn.ForeColor = System.Drawing.SystemColors.Control;
             this.inventorybtn.Image = global::Todays_Crafts.Properties.Resources.inventory;
             this.inventorybtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.inventorybtn.Location = new System.Drawing.Point(18, 247);
+            this.inventorybtn.Location = new System.Drawing.Point(18, 248);
             this.inventorybtn.Name = "inventorybtn";
             this.inventorybtn.Size = new System.Drawing.Size(257, 73);
             this.inventorybtn.TabIndex = 10;
             this.inventorybtn.Text = "       Inventory";
             this.inventorybtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.inventorybtn.UseVisualStyleBackColor = true;
+            this.inventorybtn.UseVisualStyleBackColor = false;
             this.inventorybtn.Click += new System.EventHandler(this.inventorybtn_Click);
             // 
             // sidepanel
@@ -222,6 +230,22 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1025, 47);
             this.panel3.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(907, 6);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 35);
+            this.panel5.TabIndex = 22;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(965, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 35);
+            this.panel4.TabIndex = 21;
             // 
             // button1
             // 
@@ -364,21 +388,41 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel4
+            // button2
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(965, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 35);
-            this.panel4.TabIndex = 21;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Image = global::Todays_Crafts.Properties.Resources.employee1;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(18, 544);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(257, 73);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "       Job Order";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.employeebtn_Click);
             // 
-            // panel5
+            // button3
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(907, 6);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 35);
-            this.panel5.TabIndex = 22;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(69)))), ((int)(((byte)(88)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.Image = global::Todays_Crafts.Properties.Resources.employee1;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(18, 618);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(257, 73);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "       Settings";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.employeebtn_Click);
             // 
             // Dashboard
             // 
@@ -443,5 +487,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
