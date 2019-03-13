@@ -17,7 +17,7 @@ namespace Todays_Crafts.Employee
         dbclass con = new dbclass(); // to be called in forms where you created your class create object 
         SqlCommand cmd;
         SqlDataAdapter adapt;
-        DataSet dt;
+        //DataSet dt;
 
         public FrmEmpInfo()
         {

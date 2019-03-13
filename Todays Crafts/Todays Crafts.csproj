@@ -160,11 +160,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Admin\purchasecontrol.cs">
+    <Compile Include="Admin\purchase.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Admin\purchasecontrol.Designer.cs">
-      <DependentUpon>purchasecontrol.cs</DependentUpon>
+    <Compile Include="Admin\purchase.Designer.cs">
+      <DependentUpon>purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="TodaysCrafts.cs">
       <DependentUpon>TodaysCrafts.xsd</DependentUpon>
@@ -214,8 +214,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin\purchasecontrol.resx">
-      <DependentUpon>purchasecontrol.cs</DependentUpon>
+    <EmbeddedResource Include="Admin\purchase.resx">
+      <DependentUpon>purchase.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
